@@ -36,7 +36,7 @@ function FloatingCodeBg() {
             left: `${f.x}%`,
             fontSize: `${f.sz}px`,
             fontFamily: 'var(--font-mono)',
-            color: 'var(--color-accent-cyan)',
+            color: 'var(--color-accent)',
             animation: `code-float ${f.dur}s linear ${f.delay}s infinite`,
           }}
         >
@@ -95,7 +95,7 @@ export default function Processo() {
           transition={{ duration: 0.45 }}
           className="flex items-center gap-2 text-[11px] font-bold text-ink-500 mb-6 uppercase tracking-widest"
         >
-          <span className="text-accent-cyan/80" style={{ fontFamily: 'var(--font-mono)' }}>{`//`}</span>
+          <span className="text-accent" style={{ fontFamily: 'var(--font-mono)' }}>{`//`}</span>
           <span style={{ fontFamily: 'var(--font-mono)' }}>03 / 06 · TIMELINE</span>
         </motion.div>
 
@@ -180,7 +180,7 @@ export default function Processo() {
                             initial={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
                             animate={{
                               backgroundColor: isActive && ganttVisible
-                                ? `rgba(16,185,129,${0.3 - i * 0.05})`
+                                ? `rgba(255,90,31,${0.3 - i * 0.05})`
                                 : 'rgba(255,255,255,0.05)',
                             }}
                             transition={{ duration: 0.45, delay: isActive ? 0.05 + i * 0.18 : 0 }}
@@ -230,7 +230,7 @@ export default function Processo() {
                         {prop('deliverable')}{punct(': ')}{str(step.desc)}{punct(',')}
                       </div>
                       <div className="text-[12px] leading-relaxed">
-                        {prop('status')}{punct(': ')}<span style={{ color: '#10b981' }}>&apos;✓ done&apos;</span>{punct(',')}
+                        {prop('status')}{punct(': ')}<span style={{ color: '#ff5a1f' }}>&apos;✓ done&apos;</span>{punct(',')}
                       </div>
                     </div>
                     <div className="text-[13px] leading-relaxed mt-1">
