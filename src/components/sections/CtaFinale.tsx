@@ -1,10 +1,11 @@
 "use client";
 
 import { useRef } from 'react';
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { CineVideo } from '@/components/cine-video';
 import { useCinematicAudio } from '@/hooks/useCinematicAudio';
+import InteractiveBeamBackground from '@/components/effects/InteractiveBeamBackground';
+import Particles from '@/components/effects/Particles';
 
 // Magnetic Button component
 function MagneticButton({ children, href }: { children: React.ReactNode; href: string }) {
@@ -63,24 +64,12 @@ export default function CtaFinale() {
   const t = useTranslations('cta');
   const containerRef = useRef<HTMLElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end end"]
-  });
-
-  const videoScale = useTransform(scrollYProgress, [0, 1], [1.15, 1.0]);
-  const videoFilter = useTransform(scrollYProgress, [0, 1], ["brightness(0.2) blur(20px)", "brightness(0.8) blur(0px)"]);
-
   return (
     <section ref={containerRef} id="cta" className="relative overflow-hidden h-[100svh] min-h-[700px] bg-black flex flex-col justify-center">
       
-      {/* Background Planet Video mapped to scroll */}
-      <motion.div 
-        className="absolute inset-0 pointer-events-none z-0"
-        style={{ scale: videoScale, filter: videoFilter }}
-      >
-        <CineVideo src="/videos/cta-planet.mp4" className="w-full h-full object-cover origin-center" />
-      </motion.div>
+      {/* Background Layer with interactive beam and particles */}
+      <InteractiveBeamBackground />
+      <Particles count={40} />
 
       {/* Top gradient transition from previous section */}
       <div className="absolute top-0 inset-x-0 h-[20vh] bg-gradient-to-b from-background via-background/80 to-transparent z-10 pointer-events-none" />
@@ -113,7 +102,7 @@ export default function CtaFinale() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-[110px] font-bold text-white mb-6 leading-[1.0] tracking-tighter"
+          className="text-5xl md:text-7xl lg:text-[100px] font-bold text-white mb-6 leading-[1.0] tracking-tighter"
           style={{ fontFamily: 'var(--font-display)' }}
         >
           {t('headline_1')} <br className="hidden md:block" />
