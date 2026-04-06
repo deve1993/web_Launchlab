@@ -70,7 +70,7 @@ export default function Processo() {
           >
             {/* Week headers */}
             <div className="flex items-center gap-1.5 mb-3">
-              <div className="w-24 shrink-0" />
+              <div className="w-24 shrink-0 hidden sm:block" />
               {WEEKS.map((w) => (
                 <div key={w} className="flex-1 text-center text-[10px] font-semibold text-gray-400 font-mono" style={{ minWidth: 32 }}>
                   {w}
@@ -81,7 +81,7 @@ export default function Processo() {
             {/* Phase bars */}
             {steps.map((step, i) => (
               <div key={i} className="flex items-center gap-1.5 mb-2">
-                <div className="w-24 shrink-0 text-xs font-medium text-gray-500 truncate">
+                <div className="w-24 shrink-0 text-xs font-medium text-gray-500 truncate hidden sm:block">
                   {step.title}
                 </div>
                 {WEEKS.map((_, wi) => {

@@ -63,22 +63,22 @@ export default function SocialProof() {
   return (
     <>
       <FeatureDivider className="my-16 max-w-6xl" />
-      <section className="relative mx-auto max-w-6xl px-4 xl:px-0 overflow-hidden">
+      <section className="relative mx-auto w-full max-w-6xl px-4 xl:px-0 overflow-hidden">
         <DevSymbolsBackground />
 
-        <div className="relative z-[5]">
         {/* The Core Team */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
+          className="relative z-[5]"
         >
           <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
             {t('section_label')}
             <div className="absolute top-1 -left-[8px] h-5 w-[3px] rounded-r-sm bg-orange-500" />
           </h2>
-          <p className="mt-2 max-w-lg text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
+          <p className="mt-2 max-w-lg text-2xl sm:text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
             {t('team_headline')}
           </p>
           <p className="mt-3 text-gray-600">{t('team_subtitle')}</p>
@@ -92,15 +92,20 @@ export default function SocialProof() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col items-center text-center rounded-xl bg-white p-10 ring-1 ring-black/5 shadow-sm transition-all hover:ring-orange-400/40 hover:shadow-lg"
+              className="flex flex-col items-center text-center rounded-xl bg-white p-6 sm:p-10 ring-1 ring-black/5 shadow-sm transition-all hover:ring-orange-400/40 hover:shadow-lg"
             >
-              <div className="relative shrink-0 rounded-full bg-gray-100 p-1 ring-1 ring-gray-200 mb-8">
-                <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden">
-                  <CineVideo src={m.video} className="w-full h-full object-cover scale-[1.05]" />
+              <div className="relative shrink-0 rounded-full bg-gray-100 p-1 ring-1 ring-gray-200 mb-6">
+                <div className="w-24 h-24 sm:w-40 sm:h-40 md:w-52 md:h-52 rounded-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-orange-100 to-orange-50">
+                  <div className="hidden sm:block w-full h-full">
+                    <CineVideo src={m.video} className="w-full h-full object-cover scale-[1.05]" loadMargin="500px" />
+                  </div>
+                  <span className="sm:hidden text-2xl font-bold text-orange-500">
+                    {m.name.split(' ').map((n: string) => n[0]).join('')}
+                  </span>
                 </div>
               </div>
 
-              <h3 className="text-2xl font-semibold text-gray-900 tracking-tight">{m.name}</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 tracking-tight">{m.name}</h3>
               <p className="mt-1 text-sm text-orange-600 font-medium">{m.role}</p>
               <p className="mt-4 text-sm text-gray-600 leading-relaxed max-w-sm">{m.bio}</p>
 
@@ -145,7 +150,6 @@ export default function SocialProof() {
             </div>
           </div>
         </motion.div>
-        </div>
       </section>
     </>
   );

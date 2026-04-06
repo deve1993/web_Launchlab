@@ -136,7 +136,7 @@ export default function DevSymbolsBackground() {
 
   return (
     <div
-      className="pointer-events-none select-none absolute inset-0 overflow-hidden"
+      className="pointer-events-none select-none absolute inset-0 overflow-hidden hidden md:block w-full max-w-full"
       style={{
         zIndex: 0,
         maskImage: 'linear-gradient(to bottom, transparent 5%, black 15%, black 92%, transparent)',

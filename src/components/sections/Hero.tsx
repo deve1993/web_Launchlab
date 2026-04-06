@@ -49,7 +49,7 @@ export default function Hero() {
         </FadeDiv>
 
         {/* Headline */}
-        <h1 className="mt-8 text-center text-5xl font-semibold tracking-tighter text-gray-900 sm:text-8xl sm:leading-[1.1]">
+        <h1 className="mt-8 text-center text-4xl font-semibold tracking-tighter text-gray-900 sm:text-8xl sm:leading-[1.1]">
           <FadeSpan>{t('headline_1')}</FadeSpan>{' '}
           <FadeSpan>
             <TypeWriter words={typewriterWords} className="text-orange-500" />
@@ -64,7 +64,7 @@ export default function Hero() {
         </p>
 
         {/* CTA */}
-        <FadeDiv className="flex gap-4 mt-6">
+        <FadeDiv className="flex flex-col sm:flex-row gap-3 mt-6 w-full sm:w-auto px-4 sm:px-0">
           <a
             className="inline-flex cursor-pointer items-center justify-center gap-1 rounded-md border-b-[1.5px] border-orange-700 bg-gradient-to-b from-orange-400 to-orange-500 px-5 py-3 text-sm font-medium leading-4 tracking-wide whitespace-nowrap text-white shadow-[0_0_0_2px_rgba(0,0,0,0.04),0_0_14px_0_rgba(255,255,255,0.19)] transition-all duration-200 ease-in-out hover:shadow-orange-300"
             href="#cta"
