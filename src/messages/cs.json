@@ -2,7 +2,10 @@
   "nav": {
     "cta": "Zarezervovat hovor",
     "banner_text": "MVS Workshop od €2 000 — zjistěte za 30 min, jestli je LaunchLab pro vás.",
-    "banner_cta": "Rezervovat"
+    "banner_cta": "Rezervovat",
+    "link_method": "Metoda",
+    "link_timeline": "Časová osa",
+    "link_pricing": "Ceník"
   },
   "hero": {
     "badge_mvs": "MVS dokončeno",
@@ -23,6 +26,7 @@
     "typewriter_3": "ztrácet čas."
   },
   "pain": {
+    "section_label": "Problém",
     "headline": "Poznáváte váš problém?",
     "card1_badge": "Zakladatel bez příjmů",
     "card1_hook": "Mám silný nápad. 6 měsíců plánuji.",
@@ -35,6 +39,7 @@
     "card3_body": "Burn rate nečeká. Každý týden bez produktu jsou spálené peníze."
   },
   "method": {
+    "section_label": "Sestavení",
     "eyebrow": "NÁŠ PŘÍSTUP",
     "headline": "Nejsme agentura. Nejsme freelancer.",
     "subheadline": "Jsme tým 2 lidí + AI pracující jako interní CTO — bez nákladů na nábor.",
@@ -45,26 +50,28 @@
     "step2_num": "02",
     "step2_title": "Design",
     "step2_timeline": "Týden 3–4",
-    "step2_desc": "Klikatelný Figma prototyp + uživatelské testování. Doručeno za 2 týdny",
+    "step2_desc": "Interaktivní prototyp + uživatelské testování. Doručeno za 2 týdny",
     "step3_num": "03",
     "step3_title": "Build",
     "step3_timeline": "Týden 5–6",
     "step3_desc": "Nasazený MVP + kompletní zdrojový kód"
   },
   "process": {
+    "section_label": "Časová osa",
     "eyebrow": "ČASOVÁ OSA",
-    "headline": "Od nuly k živému produktu za 6 týdnů",
+    "headline": "Co dostanete a kdy.",
     "week1_label": "Týden 1–2",
-    "week1_title": "MVS Workshop",
-    "week1_desc": "Analýza, roadmapa, kompletní dokument, závěrečná sesion",
+    "week1_title": "Kompletní roadmapa",
+    "week1_desc": "Analýza problému, strategie a projektový dokument připravený k realizaci.",
     "week2_label": "Týden 3–4",
-    "week2_title": "Design",
-    "week2_desc": "Klikatelný Figma, uživatelské testování, iterace",
+    "week2_title": "Otestovaný prototyp",
+    "week2_desc": "Interaktivní prototyp ověřený se skutečnými uživateli. Už víte, co funguje.",
     "week3_label": "Týden 5–6",
-    "week3_title": "Build & Deploy",
-    "week3_desc": "Vývoj, nasazení, dokumentace, 1 měsíc podpory"
+    "week3_title": "Živý produkt",
+    "week3_desc": "MVP online, váš kód, dokumentace součástí. 1 měsíc podpory."
   },
   "pricing": {
+    "section_label": "Ceník",
     "headline": "Plná transparentnost. Žádná překvapení.",
     "plan1_title": "MVS Workshop",
     "plan1_price": "€2 000",
@@ -78,7 +85,7 @@
     "plan2_title": "MVP Build",
     "plan2_price": "od €8 000",
     "plan2_duration": "5 týdnů",
-    "plan2_feature1": "Figma + klikatelný prototyp",
+    "plan2_feature1": "Interaktivní klikatelný prototyp",
     "plan2_feature2": "Uživatelské testování",
     "plan2_feature3": "Kompletní vývoj",
     "plan2_feature4": "Produkční nasazení",
@@ -87,6 +94,8 @@
     "note": "Workshop je přirozeným prvním krokem → vede přímo k Buildu"
   },
   "social": {
+    "section_label": "Tým",
+    "team_subtitle": "Lidská inteligence za mechanickým provedením.",
     "cases_eyebrow": "METODA FUNGUJE. POUŽÍVÁME JI NA SOBĚ.",
     "quickfy_name": "QuickFy",
     "quickfy_desc": "AI platforma automatizující operativní marketing pro evropské SME",
@@ -113,10 +122,35 @@
     "guarantee_1": "Žádný závazek",
     "guarantee_2": "30minutový úvodní hovor"
   },
+  "animation": {
+    "top_bar": "launchlab — od nápadu ke spuštění",
+    "step1_label": "01 — Workshop MVS",
+    "step2_label": "02 — Architektura",
+    "step3_label": "03 — Design System",
+    "step4_label": "04 — Deploy ✓",
+    "idea_text": "Váš nápad",
+    "postit_target": "🎯 Cíl",
+    "postit_problem": "⚡ Problém",
+    "postit_solution": "💡 Řešení",
+    "postit_market": "📊 Trh",
+    "layers_title": "Vrstvy",
+    "frame_label": "Rámec · 1440 × 900",
+    "font_label": "Inter · Tučné · 32px",
+    "status_preparing": "Příprava...",
+    "status_building": "Sestavování...",
+    "status_deploying": "Nasazování...",
+    "status_deployed": "✓ Nasazeno",
+    "live_badge": "LIVE",
+    "url_text": "vas-mvp.launchlab.it"
+  },
   "footer": {
     "tagline": "Od nápadu k MVP za 6 týdnů.",
     "privacy": "Zásady ochrany soukromí",
     "cookie": "Zásady cookies",
-    "copyright": "© 2026 LaunchLab. Všechna práva vyhrazena."
+    "copyright": "© 2026 LaunchLab. Všechna práva vyhrazena.",
+    "section_legal": "Právní",
+    "section_connect": "Kontakt",
+    "link_linkedin_daniel": "LinkedIn Daniel",
+    "link_linkedin_victor": "LinkedIn Victor"
   }
 }

@@ -48,7 +48,7 @@ export default function PainCards() {
         {/* Content side */}
         <div className="col-span-2 my-auto px-2">
           <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
-            {t('headline') ? 'Il Problema' : 'Il Problema'}
+            {t('section_label')}
             <div className="absolute top-1 -left-[8px] h-5 w-[3px] rounded-r-sm bg-orange-500" />
           </h2>
           <p className="mt-2 text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">

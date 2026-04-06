@@ -2,20 +2,43 @@
 
 import { useTranslations } from 'next-intl';
 import TypeWriter from '@/components/effects/TypeWriter';
-import TerminalShowcase from '@/components/ui/TerminalShowcase';
+import IdeaToLaunchPlayer from '@/components/remotion/IdeaToLaunchPlayer';
 import HeroBackground from '@/components/effects/HeroBackground';
 import { FadeContainer, FadeDiv, FadeSpan } from '@/components/effects/Fade';
 
 export default function Hero() {
   const t = useTranslations('hero');
+  const a = useTranslations('animation');
   const typewriterWords = [t('typewriter_1'), t('typewriter_2'), t('typewriter_3')];
+
+  const animationLabels = {
+    top_bar: a('top_bar'),
+    step1_label: a('step1_label'),
+    step2_label: a('step2_label'),
+    step3_label: a('step3_label'),
+    step4_label: a('step4_label'),
+    idea_text: a('idea_text'),
+    postit_target: a('postit_target'),
+    postit_problem: a('postit_problem'),
+    postit_solution: a('postit_solution'),
+    postit_market: a('postit_market'),
+    layers_title: a('layers_title'),
+    frame_label: a('frame_label'),
+    font_label: a('font_label'),
+    status_preparing: a('status_preparing'),
+    status_building: a('status_building'),
+    status_deploying: a('status_deploying'),
+    status_deployed: a('status_deployed'),
+    live_badge: a('live_badge'),
+    url_text: a('url_text'),
+  };
 
   return (
     <section aria-label="hero" className="pt-56">
       <FadeContainer className="relative flex flex-col items-center justify-center">
         {/* Badge */}
         <FadeDiv className="mx-auto">
-          <div className="inline-flex max-w-full items-center gap-3 rounded-full bg-white/5 px-2.5 py-0.5 pr-3 pl-0.5 font-medium text-gray-900 ring-1 shadow-lg shadow-orange-400/20 ring-black/10 backdrop-blur-[1px] sm:text-sm transition-all hover:ring-orange-300 hover:shadow-orange-400/30 cursor-default">
+          <div className="inline-flex max-w-full items-center gap-3 rounded-full bg-white px-2.5 py-0.5 pr-3 pl-0.5 font-medium text-gray-900 ring-1 shadow-lg shadow-orange-400/20 ring-black/10 sm:text-sm transition-all hover:ring-orange-300 hover:shadow-orange-400/30 cursor-default">
             <span className="shrink-0 truncate rounded-full border bg-gray-50 px-2.5 py-1 text-sm text-gray-600 sm:text-xs">
               {t('badge_mvs')}
             </span>
@@ -62,9 +85,9 @@ export default function Hero() {
         </div>
       </FadeContainer>
 
-      {/* Terminal Showcase */}
-      <div className="mx-auto max-w-6xl mt-24 px-4 xl:px-0 animate-fade-up delay-700">
-        <TerminalShowcase />
+      {/* From Idea to Launch Animation */}
+      <div className="mx-auto max-w-4xl mt-24 px-4 xl:px-0 animate-fade-up delay-700">
+        <IdeaToLaunchPlayer labels={animationLabels} />
       </div>
     </section>
   );

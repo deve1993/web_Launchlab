@@ -86,6 +86,13 @@ export default function HeroBackground() {
         }),
       )
 
+      // Inject random new cells to prevent stagnation
+      for (let k = 0; k < Math.floor(cols * rows * 0.01); k++) {
+        const ri = Math.floor(Math.random() * rows)
+        const rj = Math.floor(Math.random() * cols)
+        next[ri][rj].alive = true
+      }
+
       grid = next
       setTimeout(() => {
         animationFrameId = requestAnimationFrame(draw)

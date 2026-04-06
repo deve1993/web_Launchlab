@@ -54,7 +54,7 @@ export default function Footer() {
 
         {/* Footer Sections */}
         <div className="mt-10 min-w-44 pl-2 lg:mt-0 lg:pl-0">
-          <h3 className="mb-4 font-medium text-gray-900 sm:text-sm">Legal</h3>
+          <h3 className="mb-4 font-medium text-gray-900 sm:text-sm">{t('section_legal')}</h3>
           <ul className="space-y-4">
             <li className="text-sm"><Link href="#" className="text-gray-600 hover:text-orange-500 transition-colors">{t('privacy')}</Link></li>
             <li className="text-sm"><Link href="#" className="text-gray-600 hover:text-orange-500 transition-colors">{t('cookie')}</Link></li>
@@ -62,16 +62,16 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 min-w-44 pl-2 lg:mt-0 lg:pl-0">
-          <h3 className="mb-4 font-medium text-gray-900 sm:text-sm">Connect</h3>
+          <h3 className="mb-4 font-medium text-gray-900 sm:text-sm">{t('section_connect')}</h3>
           <ul className="space-y-4">
             <li className="text-sm">
               <a href="https://linkedin.com/in/danieldevecchi/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors">
-                LinkedIn Daniel
+                {t('link_linkedin_daniel')}
               </a>
             </li>
             <li className="text-sm">
               <a href="https://linkedin.com/in/victor-espinoza-92770217/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors">
-                LinkedIn Victor
+                {t('link_linkedin_victor')}
               </a>
             </li>
           </ul>

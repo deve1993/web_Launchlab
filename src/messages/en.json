@@ -2,7 +2,10 @@
   "nav": {
     "cta": "Book a call",
     "banner_text": "MVS Workshop from €2,000 — find out in 30 min if LaunchLab is right for you.",
-    "banner_cta": "Book now"
+    "banner_cta": "Book now",
+    "link_method": "Method",
+    "link_timeline": "Timeline",
+    "link_pricing": "Pricing"
   },
   "hero": {
     "badge_mvs": "MVS completed",
@@ -23,6 +26,7 @@
     "typewriter_3": "wasting time."
   },
   "pain": {
+    "section_label": "The Problem",
     "headline": "Do you recognize your problem?",
     "card1_badge": "Pre-revenue founder",
     "card1_hook": "I have a strong idea. I've been planning for 6 months.",
@@ -35,6 +39,7 @@
     "card3_body": "Burn rate doesn't wait. Every week without a product is cash burned."
   },
   "method": {
+    "section_label": "The Assembly",
     "eyebrow": "OUR APPROACH",
     "headline": "We're not an agency. We're not a freelancer.",
     "subheadline": "We're a 2-person team + AI working like an in-house CTO — without the hiring cost.",
@@ -45,26 +50,28 @@
     "step2_num": "02",
     "step2_title": "Design",
     "step2_timeline": "Week 3–4",
-    "step2_desc": "Clickable Figma prototype + user testing. Delivered in 2 weeks",
+    "step2_desc": "Interactive prototype + user testing. Delivered in 2 weeks",
     "step3_num": "03",
     "step3_title": "Build",
     "step3_timeline": "Week 5–6",
     "step3_desc": "Deployed MVP + full source code"
   },
   "process": {
+    "section_label": "Timeline",
     "eyebrow": "TIMELINE",
-    "headline": "From zero to live in 6 weeks",
+    "headline": "What you get, when.",
     "week1_label": "Week 1–2",
-    "week1_title": "MVS Workshop",
-    "week1_desc": "Analysis, roadmap, complete document, final session",
+    "week1_title": "Complete roadmap",
+    "week1_desc": "Problem analysis, strategy and project document ready to go.",
     "week2_label": "Week 3–4",
-    "week2_title": "Design",
-    "week2_desc": "Clickable Figma, user testing, iterations",
+    "week2_title": "Tested prototype",
+    "week2_desc": "Interactive prototype validated with real users. You already know what works.",
     "week3_label": "Week 5–6",
-    "week3_title": "Build & Deploy",
-    "week3_desc": "Development, deploy, documentation, 1 month support"
+    "week3_title": "Live product",
+    "week3_desc": "MVP online, your code, documentation included. 1 month of support."
   },
   "pricing": {
+    "section_label": "Pricing",
     "headline": "Full transparency. No surprises.",
     "plan1_title": "MVS Workshop",
     "plan1_price": "€2,000",
@@ -78,7 +85,7 @@
     "plan2_title": "MVP Build",
     "plan2_price": "from €8,000",
     "plan2_duration": "5 weeks",
-    "plan2_feature1": "Figma + clickable prototype",
+    "plan2_feature1": "Interactive clickable prototype",
     "plan2_feature2": "User testing",
     "plan2_feature3": "Full development",
     "plan2_feature4": "Production deploy",
@@ -87,6 +94,8 @@
     "note": "The Workshop is the natural first step → leads directly to the Build"
   },
   "social": {
+    "section_label": "The Team",
+    "team_subtitle": "The human intelligence behind the mechanical execution.",
     "cases_eyebrow": "THE METHOD WORKS. WE USE IT ON OURSELVES.",
     "quickfy_name": "QuickFy",
     "quickfy_desc": "AI platform that automates operational marketing for European SMEs",
@@ -113,10 +122,35 @@
     "guarantee_1": "No commitment",
     "guarantee_2": "30-min introductory call"
   },
+  "animation": {
+    "top_bar": "launchlab — from idea to launch",
+    "step1_label": "01 — Workshop MVS",
+    "step2_label": "02 — Architecture",
+    "step3_label": "03 — Design System",
+    "step4_label": "04 — Deploy ✓",
+    "idea_text": "Your idea",
+    "postit_target": "🎯 Target",
+    "postit_problem": "⚡ Problem",
+    "postit_solution": "💡 Solution",
+    "postit_market": "📊 Market",
+    "layers_title": "Layers",
+    "frame_label": "Frame · 1440 × 900",
+    "font_label": "Inter · Semibold · 32px",
+    "status_preparing": "Preparing...",
+    "status_building": "Building...",
+    "status_deploying": "Deploying...",
+    "status_deployed": "✓ Deployed",
+    "live_badge": "LIVE",
+    "url_text": "your-mvp.launchlab.it"
+  },
   "footer": {
     "tagline": "From idea to MVP in 6 weeks.",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy",
-    "copyright": "© 2026 LaunchLab. All rights reserved."
+    "copyright": "© 2026 LaunchLab. All rights reserved.",
+    "section_legal": "Legal",
+    "section_connect": "Connect",
+    "link_linkedin_daniel": "LinkedIn Daniel",
+    "link_linkedin_victor": "LinkedIn Victor"
   }
 }

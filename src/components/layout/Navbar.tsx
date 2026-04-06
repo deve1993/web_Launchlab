@@ -88,13 +88,13 @@ export default function Navbar() {
           <nav className="hidden sm:block md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
             <div className="flex items-center gap-8 text-sm font-medium">
               <a className="px-2 py-1 text-gray-600 hover:text-orange-500 transition-colors hover:underline hover:underline-offset-4 hover:decoration-orange-400" href="#method">
-                Metodo
+                {t('link_method')}
               </a>
               <a className="px-2 py-1 text-gray-600 hover:text-orange-500 transition-colors hover:underline hover:underline-offset-4 hover:decoration-orange-400" href="#process">
-                Timeline
+                {t('link_timeline')}
               </a>
               <a className="px-2 py-1 text-gray-600 hover:text-orange-500 transition-colors hover:underline hover:underline-offset-4 hover:decoration-orange-400" href="#pricing">
-                Pricing
+                {t('link_pricing')}
               </a>
             </div>
           </nav>
@@ -125,9 +125,9 @@ export default function Navbar() {
         {menuOpen && (
           <nav className="mt-6 flex flex-col gap-6 text-lg ease-in-out sm:hidden">
             <ul className="space-y-4 font-medium">
-              <li onClick={() => setMenuOpen(false)}><a href="#method">Metodo</a></li>
-              <li onClick={() => setMenuOpen(false)}><a href="#process">Timeline</a></li>
-              <li onClick={() => setMenuOpen(false)}><a href="#pricing">Pricing</a></li>
+              <li onClick={() => setMenuOpen(false)}><a href="#method">{t('link_method')}</a></li>
+              <li onClick={() => setMenuOpen(false)}><a href="#process">{t('link_timeline')}</a></li>
+              <li onClick={() => setMenuOpen(false)}><a href="#pricing">{t('link_pricing')}</a></li>
             </ul>
             <div className="flex items-center gap-2">
               {locales.map((loc) => (

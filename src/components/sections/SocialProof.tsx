@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { CineVideo } from '@/components/cine-video';
 import FeatureDivider from '@/components/effects/FeatureDivider';
 import { Divider } from '@/components/effects/Divider';
+import DevSymbolsBackground from '@/components/effects/DevSymbolsBackground';
 
 const techRow1 = [
   { label: 'Next.js', icon: 'nextdotjs', iconHex: '000000' },
@@ -62,8 +63,10 @@ export default function SocialProof() {
   return (
     <>
       <FeatureDivider className="my-16 max-w-6xl" />
-      <section className="relative mx-auto max-w-6xl px-4 xl:px-0">
+      <section className="relative mx-auto max-w-6xl px-4 xl:px-0 overflow-hidden">
+        <DevSymbolsBackground />
 
+        <div className="relative z-[5]">
         {/* The Core Team */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -72,13 +75,13 @@ export default function SocialProof() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
-            Il Team
+            {t('section_label')}
             <div className="absolute top-1 -left-[8px] h-5 w-[3px] rounded-r-sm bg-orange-500" />
           </h2>
           <p className="mt-2 max-w-lg text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
             {t('team_headline')}
           </p>
-          <p className="mt-3 text-gray-600">L&apos;intelligenza umana dietro l&apos;esecuzione meccanica.</p>
+          <p className="mt-3 text-gray-600">{t('team_subtitle')}</p>
         </motion.div>
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -142,6 +145,7 @@ export default function SocialProof() {
             </div>
           </div>
         </motion.div>
+        </div>
       </section>
     </>
   );
