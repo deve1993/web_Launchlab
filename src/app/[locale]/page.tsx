@@ -9,7 +9,7 @@ import CtaFinale from '@/components/sections/CtaFinale';
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="relative mx-auto flex flex-col">
       <Hero />
       <PainCards />
       <Metodo />

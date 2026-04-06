@@ -3,9 +3,11 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { CineVideo } from '@/components/cine-video';
+import FeatureDivider from '@/components/effects/FeatureDivider';
+import { Divider } from '@/components/effects/Divider';
 
 const techRow1 = [
-  { label: 'Next.js', icon: 'nextdotjs', iconHex: 'ffffff' },
+  { label: 'Next.js', icon: 'nextdotjs', iconHex: '000000' },
   { label: 'React', icon: 'react' },
   { label: 'TypeScript', icon: 'typescript' },
   { label: 'Vite', icon: 'vite' },
@@ -20,75 +22,34 @@ const techRow1 = [
 ];
 
 const techRow2 = [
-  { label: 'GitHub', icon: 'github', iconHex: 'ffffff' },
-  { label: 'Vercel', icon: 'vercel', iconHex: 'ffffff' },
+  { label: 'GitHub', icon: 'github', iconHex: '000000' },
+  { label: 'Vercel', icon: 'vercel', iconHex: '000000' },
   { label: 'Tailwind CSS', icon: 'tailwindcss' },
   { label: 'Odoo', icon: 'odoo' },
   { label: 'Anthropic', icon: 'anthropic', iconHex: 'D4A373' },
-  { label: 'OpenAI', icon: 'openai', iconHex: 'ffffff' },
+  { label: 'OpenAI', icon: 'openai', iconHex: '000000' },
   { label: 'Gemini', icon: 'googlegemini' },
   { label: 'Perplexity', icon: 'perplexity' },
-  { label: 'Make', icon: 'make', iconHex: 'ffffff' },
+  { label: 'Make', icon: 'make', iconHex: '6D00CC' },
   { label: 'n8n', icon: 'n8n' },
   { label: 'Coolify', icon: 'coolify' }
 ];
 
-function TechPill({ item }: { item: { label: string, icon: string, iconHex?: string } }) {
-  const iconUrl = item.iconHex 
+function TechPill({ item }: { item: { label: string; icon: string; iconHex?: string } }) {
+  const iconUrl = item.iconHex
     ? `https://cdn.simpleicons.org/${item.icon}/${item.iconHex}`
-    : `https://cdn.simpleicons.org/${item.icon}/white`;
+    : `https://cdn.simpleicons.org/${item.icon}`;
 
   return (
-    <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-[10px] font-bold text-white/40 whitespace-nowrap mx-2 transition-all hover:scale-105 hover:text-white hover:bg-white/5 border border-white/5 bg-white/[0.02]"
-      style={{ fontFamily: 'var(--font-mono)' }}>
-      <img src={iconUrl} alt={item.label} className="w-3.5 h-3.5 object-contain opacity-50" />
+    <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-medium text-gray-700 whitespace-nowrap mx-1.5 transition-all hover:scale-105 hover:border-orange-300 hover:text-orange-600 border border-gray-200 bg-white">
+      <img src={iconUrl} alt={item.label} className="w-3.5 h-3.5 object-contain" />
       {item.label}
     </span>
   );
 }
 
-function InteractiveFounderCard({ m, index }: { m: any; index: number }) {
-  // Floating offset based on index to make them look organic and independent
-  const floatAnim = index === 0 ? [-10, 10, -10] : [10, -10, 10];
-  const rotateAnim = index === 0 ? [-2, 2, -2] : [2, -2, 2];
-
-  return (
-    <motion.div
-      animate={{ y: floatAnim, rotateZ: rotateAnim }}
-      transition={{ duration: 7 + index, ease: "easeInOut", repeat: Infinity }}
-      className="group relative bg-surface border border-white/5 rounded-[40px] p-8 md:p-12 flex flex-col items-center justify-center text-center overflow-hidden h-full backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-    >
-      {/* Background ambient lighting from the video's color */}
-      <div className={`absolute inset-0 opacity-5 blur-[80px] rounded-full mix-blend-screen pointer-events-none transition-opacity duration-700 group-hover:opacity-15 bg-accent`} />
-      
-      {/* Core Video */}
-      <div className="w-56 h-56 md:w-72 md:h-72 relative mb-10 rounded-full overflow-hidden shadow-[inset_0_0_20px_rgba(0,0,0,0.8),0_10px_40px_rgba(0,0,0,0.5)] border border-white/5 ring-1 ring-white/10 group-hover:scale-[1.03] transition-transform duration-1000">
-        <CineVideo src={m.video} className="w-full h-full object-cover scale-[1.05]" />
-      </div>
-
-      <div className="relative z-10 w-full">
-        <h3 className="text-3xl lg:text-4xl font-bold text-white mb-3 tracking-tight" style={{ fontFamily: 'var(--font-sora)' }}>{m.name}</h3>
-        <p className="text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full inline-block border mb-6 text-accent bg-accent/5 border-accent/20" style={{ fontFamily: 'var(--font-mono)' }}>
-          {m.role}
-        </p>
-        <p className="text-base text-ink-500 leading-relaxed font-medium max-w-sm mx-auto mb-10">{m.bio}</p>
-        
-        <a href={m.linkedin} target="_blank" rel="noopener noreferrer" 
-           className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-ink-500 hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-full border border-white/5 hover:border-white/20 font-mono">
-           LINKEDIN
-        </a>
-      </div>
-    </motion.div>
-  );
-}
-
 export default function SocialProof() {
   const t = useTranslations('social');
-
-  const products = [
-    { name: t('quickfy_name'), desc: t('quickfy_desc'), status: t('quickfy_status') },
-    { name: t('quickref_name'), desc: t('quickref_desc'), status: t('quickref_status') },
-  ];
 
   const team = [
     { name: t('daniel_name'), role: t('daniel_role'), bio: t('daniel_bio'), linkedin: 'https://linkedin.com/in/danieldevecchi/', video: '/videos/core-dan.mp4' },
@@ -99,40 +60,9 @@ export default function SocialProof() {
   const d2 = [...techRow2, ...techRow2];
 
   return (
-    <section className="relative bg-background overflow-hidden py-32 px-6">
-
-      <div className="max-w-6xl mx-auto relative z-10 space-y-32">
-        {/* Products Showcase */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="flex items-center gap-2 text-[11px] font-bold text-ink-500 mb-6 uppercase tracking-widest" style={{ fontFamily: 'var(--font-mono)' }}>
-            <span className="text-accent">{`//`}</span>
-            <span>05 / 06 · I RISULTATI</span>
-          </div>
-
-          <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-8"
-            style={{ fontFamily: 'var(--font-mono)' }}>
-            {t('cases_eyebrow')}
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {products.map((p) => (
-              <div key={p.name} className="bg-surface rounded-3xl p-8 border border-white/5 shadow-2xl">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-white tracking-tight" style={{ fontFamily: 'var(--font-sora)' }}>{p.name}</h3>
-                  <span className="text-[10px] font-bold px-3 py-1 rounded-full bg-accent/10 text-accent border border-accent/20"
-                    style={{ fontFamily: 'var(--font-mono)' }}>
-                    {p.status}
-                  </span>
-                </div>
-                <p className="text-base text-ink-500 leading-relaxed font-medium">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+    <>
+      <FeatureDivider className="my-16 max-w-6xl" />
+      <section className="relative mx-auto max-w-6xl px-4 xl:px-0">
 
         {/* The Core Team */}
         <motion.div
@@ -141,50 +71,78 @@ export default function SocialProof() {
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-4" style={{ fontFamily: 'var(--font-sora)' }}>
-              {t('team_headline')}
-            </h2>
-            <p className="text-ink-500 text-lg">L'intelligenza umana dietro l'esecuzione meccanica.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 relative px-4 md:px-12">
-            {team.map((m, i) => (
-              <InteractiveFounderCard key={m.name} m={m} index={i} />
-            ))}
-          </div>
+          <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
+            Il Team
+            <div className="absolute top-1 -left-[8px] h-5 w-[3px] rounded-r-sm bg-orange-500" />
+          </h2>
+          <p className="mt-2 max-w-lg text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
+            {t('team_headline')}
+          </p>
+          <p className="mt-3 text-gray-600">L&apos;intelligenza umana dietro l&apos;esecuzione meccanica.</p>
         </motion.div>
 
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {team.map((m, i) => (
+            <motion.div
+              key={m.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="flex flex-col items-center text-center rounded-xl bg-white p-10 ring-1 ring-black/5 shadow-sm transition-all hover:ring-orange-400/40 hover:shadow-lg"
+            >
+              <div className="relative shrink-0 rounded-full bg-gray-100 p-1 ring-1 ring-gray-200 mb-8">
+                <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden">
+                  <CineVideo src={m.video} className="w-full h-full object-cover scale-[1.05]" />
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 tracking-tight">{m.name}</h3>
+              <p className="mt-1 text-sm text-orange-600 font-medium">{m.role}</p>
+              <p className="mt-4 text-sm text-gray-600 leading-relaxed max-w-sm">{m.bio}</p>
+
+              <a
+                href={m.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-1.5 rounded-sm border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-xs transition-all hover:border-orange-300 hover:text-orange-600"
+              >
+                LinkedIn <span className="text-gray-400">↗</span>
+              </a>
+            </motion.div>
+          ))}
+        </div>
+
         {/* Tech Stack Marquee */}
+        <Divider className="my-16" />
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[11px] font-bold uppercase tracking-widest text-ink-500 text-center mb-8"
-            style={{ fontFamily: 'var(--font-mono)' }}>
+          <p className="text-center text-sm font-medium text-gray-500 mb-8">
             {t('tech_label')}
           </p>
-          
+
           <div className="relative">
-            {/* Fade edges */}
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
-            
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-50 to-transparent z-10" />
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-50 to-transparent z-10" />
+
             <div className="overflow-hidden">
               <div className="flex animate-marquee-left w-max">
                 {d1.map((item, i) => <TechPill key={`r1-${i}`} item={item} />)}
               </div>
             </div>
-            <div className="overflow-hidden mt-4">
+            <div className="overflow-hidden mt-3">
               <div className="flex animate-marquee-right w-max">
                 {d2.map((item, i) => <TechPill key={`r2-${i}`} item={item} />)}
               </div>
             </div>
           </div>
         </motion.div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

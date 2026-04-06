@@ -2,8 +2,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import InteractiveGridBackground from '@/components/effects/InteractiveGridBackground';
-import CodeBackground from '@/components/effects/CodeBackground';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
@@ -34,10 +32,6 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <div aria-hidden="true">
-        <InteractiveGridBackground />
-        <CodeBackground />
-      </div>
       <Navbar />
       {children}
       <Footer />

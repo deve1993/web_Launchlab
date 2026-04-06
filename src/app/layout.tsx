@@ -1,22 +1,13 @@
 import type { Metadata } from 'next';
-import { Sora, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
+import { Inter, IBM_Plex_Mono } from 'next/font/google';
 import { headers } from 'next/headers';
 import { LenisProvider } from '@/components/lenis-provider';
-import CustomCursor from '@/components/effects/CustomCursor';
-import { SoundProvider, AudioUnlockerButton } from '@/components/effects/SoundProvider';
 import './globals.css';
 
-const sora = Sora({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-sora',
-  weight: ['400', '600', '700'],
-  display: 'swap',
-});
-
-const ibmPlexSans = IBM_Plex_Sans({
-  subsets: ['latin'],
-  variable: '--font-ibm-sans',
-  weight: ['400', '500', '600'],
+  variable: '--font-inter',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
 
@@ -51,22 +42,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const locale = headersList.get('x-next-intl-locale') ?? 'it';
 
   return (
-    <html
-      lang={locale}
-      className={`${sora.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
-    >
-      <head>
-         {/* Strategico LCP Preload per l'elemento video Hero in cima alla view */}
-         <link rel="preload" as="video" href="/videos/Herobg.mp4" type="video/mp4" crossOrigin="anonymous" />
-      </head>
-      <body>
-        <SoundProvider>
-          <AudioUnlockerButton />
-          <LenisProvider>
-            <CustomCursor />
-            {children}
-          </LenisProvider>
-        </SoundProvider>
+    <html lang={locale}>
+      <body
+        className={`${inter.variable} ${ibmPlexMono.variable} min-h-screen overflow-x-hidden scroll-auto bg-gray-50 antialiased selection:bg-orange-100 selection:text-orange-600`}
+        style={{ fontFamily: 'var(--font-body)' }}
+      >
+        <LenisProvider>
+          {children}
+        </LenisProvider>
       </body>
     </html>
   );
