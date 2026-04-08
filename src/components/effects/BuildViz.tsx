@@ -7,7 +7,7 @@ const terminalLines = [
   { text: "✓ Compiled successfully", color: "#34d399", delay: 0.6 },
   { text: "✓ Generating static pages", color: "#34d399", delay: 1.0 },
   { text: "✓ Deploying to production...", color: "#fdba74", delay: 1.4 },
-  { text: "🚀 Live at launchlab.it", color: "#fb923c", delay: 1.9 },
+  { text: "🚀 Live at dvesolutions.eu", color: "#fb923c", delay: 1.9 },
 ];
 
 export default function BuildViz() {

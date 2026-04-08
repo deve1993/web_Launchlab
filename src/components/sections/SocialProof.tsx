@@ -53,8 +53,8 @@ export default function SocialProof() {
   const t = useTranslations('social');
 
   const team = [
-    { name: t('daniel_name'), role: t('daniel_role'), bio: t('daniel_bio'), linkedin: 'https://linkedin.com/in/danieldevecchi/', video: '/videos/core-dan.mp4' },
-    { name: t('victor_name'), role: t('victor_role'), bio: t('victor_bio'), linkedin: 'https://linkedin.com/in/victor-espinoza-92770217/', video: '/videos/core-vic.mp4' },
+    { name: t('daniel_name'), role: t('daniel_role'), bio: t('daniel_bio'), linkedin: 'https://linkedin.com/in/danieldevecchi/', email: 'Daniel@dvesolutions.eu', video: '/videos/core-dan.mp4' },
+    { name: t('victor_name'), role: t('victor_role'), bio: t('victor_bio'), linkedin: 'https://linkedin.com/in/victor-espinoza-92770217/', email: 'Victor@dvesolutions.eu', video: '/videos/core-vic.mp4' },
   ];
 
   const d1 = [...techRow1, ...techRow1];
@@ -84,7 +84,7 @@ export default function SocialProof() {
           <p className="mt-3 text-gray-600">{t('team_subtitle')}</p>
         </motion.div>
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="relative z-[5] mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
           {team.map((m, i) => (
             <motion.div
               key={m.name}
@@ -109,17 +109,64 @@ export default function SocialProof() {
               <p className="mt-1 text-sm text-orange-600 font-medium">{m.role}</p>
               <p className="mt-4 text-sm text-gray-600 leading-relaxed max-w-sm">{m.bio}</p>
 
-              <a
-                href={m.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-1.5 rounded-sm border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-xs transition-all hover:border-orange-300 hover:text-orange-600"
-              >
-                LinkedIn <span className="text-gray-400">↗</span>
-              </a>
+              <div className="mt-6 flex flex-wrap justify-center gap-2">
+                <a
+                  href={m.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-sm border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-xs transition-all hover:border-orange-300 hover:text-orange-600"
+                >
+                  LinkedIn <span className="text-gray-400">↗</span>
+                </a>
+                <a
+                  href={`mailto:${m.email}`}
+                  className="inline-flex items-center gap-1.5 rounded-sm border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-xs transition-all hover:border-orange-300 hover:text-orange-600"
+                >
+                  {m.email}
+                </a>
+              </div>
             </motion.div>
           ))}
         </div>
+
+        <Divider className="my-16" />
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.6 }}
+          className="relative z-[5]"
+        >
+          <p className="text-center text-xs font-semibold uppercase tracking-widest text-gray-400 mb-8">
+            {t('cases_eyebrow')}
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              { name: t('quickfy_name'), desc: t('quickfy_desc'), status: t('quickfy_status') },
+              { name: t('quickref_name'), desc: t('quickref_desc'), status: t('quickref_status') },
+            ].map((p, i) => (
+              <motion.div
+                key={p.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="rounded-xl bg-white p-6 ring-1 ring-black/5 shadow-sm flex flex-col gap-3 transition-all hover:ring-orange-400/40 hover:shadow-md"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-semibold text-gray-900 tracking-tight">{p.name}</h3>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-medium text-emerald-700 ring-1 ring-emerald-200">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    {p.status}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">{p.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Tech Stack Marquee */}
         <Divider className="my-16" />

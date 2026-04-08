@@ -1,7 +1,7 @@
 {
   "nav": {
     "cta": "Prenota call",
-    "banner_text": "Workshop MVS da €2.000 — scopri in 30 min se LaunchLab fa per te.",
+    "banner_text": "Workshop MVS da €2.000 — scopri in 30 min se DVEsolutions fa per te.",
     "banner_cta": "Prenota ora",
     "link_method": "Metodo",
     "link_timeline": "Timeline",
@@ -15,7 +15,7 @@
     "headline_accent": "pianificare.",
     "headline_2": "Inizia a lanciare.",
     "subheadline": "Portiamo la tua idea dal foglio bianco al prototipo testabile in 2 settimane — e al prodotto live in 6. Con AI, senza sprechi, senza agenzia che non capisce il tuo business.",
-    "cta_primary": "Scopri se LaunchLab fa per te",
+    "cta_primary": "Scopri se DVEsolutions fa per te",
     "cta_secondary": "Guarda come funziona",
     "stat_1": "2 prodotti lanciati",
     "stat_2": "15+ anni esperienza",
@@ -123,7 +123,7 @@
     "guarantee_2": "Call conoscitiva di 30 min"
   },
   "animation": {
-    "top_bar": "launchlab — dall'idea al lancio",
+    "top_bar": "dvesolutions — dall'idea al lancio",
     "step1_label": "01 — Workshop MVS",
     "step2_label": "02 — Architettura",
     "step3_label": "03 — Design System",
@@ -141,13 +141,13 @@
     "status_deploying": "Distribuzione...",
     "status_deployed": "✓ Distribuito",
     "live_badge": "LIVE",
-    "url_text": "tuo-mvp.launchlab.it"
+    "url_text": "tuo-mvp.dvesolutions.eu"
   },
   "footer": {
     "tagline": "Da idea a MVP in 6 settimane.",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy",
-    "copyright": "© 2026 LaunchLab. All rights reserved.",
+    "copyright": "© 2026 DVEsolutions. All rights reserved.",
     "section_legal": "Legale",
     "section_connect": "Connettiti",
     "link_linkedin_daniel": "LinkedIn Daniel",
@@ -342,7 +342,7 @@
       "note": "14 giorni gratis · cancella quando vuoi · supporto incluso"
     },
     "footer": {
-      "copyright": "© 2026 LaunchLab · Agent Lead. Tutti i diritti riservati."
+      "copyright": "© 2026 DVEsolutions · Agent Lead. Tutti i diritti riservati."
     }
   }
 }

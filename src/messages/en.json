@@ -1,7 +1,7 @@
 {
   "nav": {
     "cta": "Book a call",
-    "banner_text": "MVS Workshop from €2,000 — find out in 30 min if LaunchLab is right for you.",
+    "banner_text": "MVS Workshop from €2,000 — find out in 30 min if DVEsolutions is right for you.",
     "banner_cta": "Book now",
     "link_method": "Method",
     "link_timeline": "Timeline",
@@ -15,7 +15,7 @@
     "headline_accent": "planning.",
     "headline_2": "Start launching.",
     "subheadline": "We take your idea from blank page to testable prototype in 2 weeks — and to a live product in 6. With AI, no waste, no agency that doesn't understand your business.",
-    "cta_primary": "See if LaunchLab is right for you",
+    "cta_primary": "See if DVEsolutions is right for you",
     "cta_secondary": "See how it works",
     "stat_1": "2 products launched",
     "stat_2": "15+ years combined",
@@ -123,7 +123,7 @@
     "guarantee_2": "30-min introductory call"
   },
   "animation": {
-    "top_bar": "launchlab — from idea to launch",
+    "top_bar": "dvesolutions — from idea to launch",
     "step1_label": "01 — Workshop MVS",
     "step2_label": "02 — Architecture",
     "step3_label": "03 — Design System",
@@ -141,13 +141,13 @@
     "status_deploying": "Deploying...",
     "status_deployed": "✓ Deployed",
     "live_badge": "LIVE",
-    "url_text": "your-mvp.launchlab.it"
+    "url_text": "your-mvp.dvesolutions.eu"
   },
   "footer": {
     "tagline": "From idea to MVP in 6 weeks.",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy",
-    "copyright": "© 2026 LaunchLab. All rights reserved.",
+    "copyright": "© 2026 DVEsolutions. All rights reserved.",
     "section_legal": "Legal",
     "section_connect": "Connect",
     "link_linkedin_daniel": "LinkedIn Daniel",
@@ -342,7 +342,7 @@
       "note": "14 days free · cancel anytime · support included"
     },
     "footer": {
-      "copyright": "© 2026 LaunchLab · Agent Lead. All rights reserved."
+      "copyright": "© 2026 DVEsolutions · Agent Lead. All rights reserved."
     }
   }
 }

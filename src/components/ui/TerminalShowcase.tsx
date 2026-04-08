@@ -8,7 +8,7 @@ const firecrawl = new FirecrawlApp({
   apiKey: "YOUR_API_KEY"
 });
 
-const scrapeResult = await firecrawl.scrapeUrl('launchlab.it', {
+const scrapeResult = await firecrawl.scrapeUrl('dvesolutions.eu', {
   formats: ['markdown', 'html'],
   onlyMainContent: true
 });
@@ -45,7 +45,7 @@ export default function TerminalShowcase() {
           <div className="w-3 h-3 rounded-full" style={{ background: '#27c93f' }} />
         </div>
         <div className="text-[10px] font-medium text-gray-500 uppercase tracking-widest font-mono">
-          launchlab.ts — bash
+          dvesolutions.ts — bash
         </div>
         <div className="w-12" />
       </div>
@@ -62,7 +62,7 @@ export default function TerminalShowcase() {
               </div>
             ))}
             <div className="flex items-center gap-2 text-xs text-gray-200 font-mono bg-orange-500/10 px-2 py-1 rounded border border-orange-500/20">
-              <span className="text-orange-400">TS</span> launchlab.ts
+              <span className="text-orange-400">TS</span> dvesolutions.ts
             </div>
           </div>
         </div>

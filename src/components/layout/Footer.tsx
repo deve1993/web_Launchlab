@@ -31,13 +31,20 @@ export default function Footer() {
 
         {/* Logo + Social */}
         <div className="mr-auto flex w-full justify-between lg:w-fit lg:flex-col">
-          <Link href="/" className="flex items-center select-none">
+          <Link href="/" className="flex items-center gap-2 select-none">
             <Image
-              src="/images/loghi/logo-dark.png"
-              alt="LaunchLab"
-              width={200}
-              height={48}
-              className="ml-2 h-14 w-auto"
+              src="/images/loghi/logo-dve-icon.svg"
+              alt=""
+              width={40}
+              height={40}
+              className="h-10 w-auto object-contain"
+            />
+            <Image
+              src="/images/loghi/logo-dve.svg"
+              alt="DVE Solutions"
+              width={160}
+              height={40}
+              className="h-12 w-auto object-contain"
             />
           </Link>
           <div>
@@ -77,6 +84,22 @@ export default function Footer() {
           </ul>
         </div>
       </footer>
+
+      <div className="mx-auto max-w-6xl px-4 xl:px-0 py-4 flex justify-center">
+        <p className="text-xs text-gray-400">
+          Made with{' '}
+          <span className="text-red-400">♥</span>
+          {' '}by{' '}
+          <a
+            href="https://pixarts.eu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-orange-500 transition-colors"
+          >
+            Pixarts
+          </a>
+        </p>
+      </div>
     </div>
   );
 }

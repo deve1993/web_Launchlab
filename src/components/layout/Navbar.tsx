@@ -118,14 +118,22 @@ export default function Navbar({ links, ctaText, ctaHref, ghostText, ghostHref }
       <div className="w-full md:my-auto">
         <div className="relative flex items-center justify-between">
           {/* Logo — always links to home */}
-          <Link href={`/${locale}`} aria-label="Home">
+          <Link href={`/${locale}`} aria-label="Home" className="flex items-center gap-2">
             <Image
-              src="/images/loghi/logo-dark.png"
-              alt="LaunchLab"
-              width={200}
-              height={48}
+              src="/images/loghi/logo-dve-icon.svg"
+              alt=""
+              width={40}
+              height={40}
               priority
-              className="h-9 sm:h-14 w-auto object-contain"
+              className="h-8 sm:h-9 w-auto object-contain"
+            />
+            <Image
+              src="/images/loghi/logo-dve.svg"
+              alt="DVE Solutions"
+              width={160}
+              height={40}
+              priority
+              className="h-11 sm:h-12 w-auto object-contain"
             />
           </Link>
 

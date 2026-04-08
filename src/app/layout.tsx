@@ -20,15 +20,15 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'LaunchLab — Da idea a MVP in 6 settimane',
-    template: '%s | LaunchLab',
+    default: 'DVEsolutions — Da idea a MVP in 6 settimane',
+    template: '%s | DVEsolutions',
   },
   description:
     'Studio di consulenza che trasforma la tua idea in un MVP funzionante in 6 settimane. Workshop, design e sviluppo con AI.',
-  metadataBase: new URL('https://launchlab.com'),
+  metadataBase: new URL('https://dvesolutions.eu'),
   openGraph: {
     type: 'website',
-    siteName: 'LaunchLab',
+    siteName: 'DVEsolutions',
     images: [{ url: '/images/loghi/logo-dark.png', width: 1200, height: 630 }],
   },
   icons: {

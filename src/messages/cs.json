@@ -1,7 +1,7 @@
 {
   "nav": {
     "cta": "Zarezervovat hovor",
-    "banner_text": "MVS Workshop od €2 000 — zjistěte za 30 min, jestli je LaunchLab pro vás.",
+    "banner_text": "MVS Workshop od €2 000 — zjistěte za 30 min, jestli je DVEsolutions pro vás.",
     "banner_cta": "Rezervovat",
     "link_method": "Metoda",
     "link_timeline": "Časová osa",
@@ -15,7 +15,7 @@
     "headline_accent": "plánovat.",
     "headline_2": "Začněte spouštět.",
     "subheadline": "Vezmeme váš nápad od prázdné stránky k testovatelému prototypu za 2 týdny — a k živému produktu za 6. S AI, bez plýtvání, bez agentury, která nerozumí vašemu businessu.",
-    "cta_primary": "Zjistěte, jestli je LaunchLab pro vás",
+    "cta_primary": "Zjistěte, jestli je DVEsolutions pro vás",
     "cta_secondary": "Podívejte se jak to funguje",
     "stat_1": "2 spuštěné produkty",
     "stat_2": "15+ let zkušeností",
@@ -123,7 +123,7 @@
     "guarantee_2": "30minutový úvodní hovor"
   },
   "animation": {
-    "top_bar": "launchlab — od nápadu ke spuštění",
+    "top_bar": "dvesolutions — od nápadu ke spuštění",
     "step1_label": "01 — Workshop MVS",
     "step2_label": "02 — Architektura",
     "step3_label": "03 — Design System",
@@ -141,13 +141,13 @@
     "status_deploying": "Nasazování...",
     "status_deployed": "✓ Nasazeno",
     "live_badge": "LIVE",
-    "url_text": "vas-mvp.launchlab.it"
+    "url_text": "vas-mvp.dvesolutions.eu"
   },
   "footer": {
     "tagline": "Od nápadu k MVP za 6 týdnů.",
     "privacy": "Zásady ochrany soukromí",
     "cookie": "Zásady cookies",
-    "copyright": "© 2026 LaunchLab. Všechna práva vyhrazena.",
+    "copyright": "© 2026 DVEsolutions. Všechna práva vyhrazena.",
     "section_legal": "Právní",
     "section_connect": "Kontakt",
     "link_linkedin_daniel": "LinkedIn Daniel",
@@ -342,7 +342,7 @@
       "note": "14 dní zdarma · zrušte kdykoliv · podpora zahrnuta"
     },
     "footer": {
-      "copyright": "© 2026 LaunchLab · Agent Lead. Všechna práva vyhrazena."
+      "copyright": "© 2026 DVEsolutions · Agent Lead. Všechna práva vyhrazena."
     }
   }
 }
