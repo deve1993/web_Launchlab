@@ -84,7 +84,7 @@ export default function SocialProof() {
           <p className="mt-3 text-gray-600">{t('team_subtitle')}</p>
         </motion.div>
 
-        <div className="relative z-[5] mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="relative z-[5] mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 pl-0.5 pr-0.5">
           {team.map((m, i) => (
             <motion.div
               key={m.name}
@@ -142,7 +142,7 @@ export default function SocialProof() {
             {t('cases_eyebrow')}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-0.5">
             {[
               { name: t('quickfy_name'), desc: t('quickfy_desc'), status: t('quickfy_status') },
               { name: t('quickref_name'), desc: t('quickref_desc'), status: t('quickref_status') },

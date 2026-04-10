@@ -72,7 +72,7 @@ export default function Metodo() {
             return (
               <div
                 key={step.num}
-                className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center"
+                className={"grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center ${i === 2 ? pb-0.5 : ''}"}
               >
                 {/* Text side */}
                 <motion.div

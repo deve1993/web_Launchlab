@@ -106,7 +106,7 @@ export default function Processo() {
           </motion.div>
 
           {/* 3 Deliverable cards */}
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5 pb-0.5 pt-0.5">
             {steps.map((step, i) => (
               <motion.div
                 key={i}
