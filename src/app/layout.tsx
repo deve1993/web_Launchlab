@@ -3,6 +3,7 @@ import { Inter, IBM_Plex_Mono } from 'next/font/google';
 import { headers } from 'next/headers';
 import { LenisProvider } from '@/components/lenis-provider';
 import './globals.css';
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -53,6 +54,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           {children}
         </LenisProvider>
       </body>
+      <Script id="agent-lead" strategy="afterInteractive">{`
+        window.AgentLeadSettings = { skill_id: 'dvesolutions' };
+        var s = document.createElement('script');
+        s.src = 'https://agentlead.fl1.it/agent.js';
+        s.async = true;
+        document.body.appendChild(s);
+      `}</Script>
     </html>
   );
 }
